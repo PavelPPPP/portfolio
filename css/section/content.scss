@@ -1,0 +1,22 @@
+.contents {
+	background: $white;
+
+	.container {
+		@extend %clearfix;
+	}
+}
+
+.contents__left {
+	width: rem(220px);
+	float: left;
+}
+
+.contents__right {
+	width: rem(700px);
+	float: right;
+}
+
+.title {
+	margin-bottom: rem(20px);
+	font-size: rem(35px);
+}

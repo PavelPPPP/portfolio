@@ -1,0 +1,105 @@
+html {
+	font-size: 18px;
+
+	@include desctop {
+		font-size: 18px;
+	}
+
+	@include tablets {
+		font-size: 18px;
+	}
+
+	@include mobile {
+		font-size: 15px;
+	}
+
+	@include phones {
+		font-size: 13px;
+	}
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background: $white;
+	@include fira(regular);
+	color: $black;
+	line-height: 1.42;
+}
+
+.wrapper {
+	position: relative;
+	min-height: 100%;
+	overflow: hidden;
+
+	&:after {
+		content: "";
+		display: block;
+		height: rem(50px);
+	}
+
+	@include mobile {
+		&:after {
+			height: rem(115px);
+		}
+	}
+}
+
+.maincontent {
+	padding-bottom: rem(50px);
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1000px;
+	padding: 0 20px;
+
+	@include desctop {
+		width: 940px;
+	}
+
+	@include tablets {
+		width: 728px;
+	}
+
+	@include mobile {
+		width: 300px;
+		padding: 0 10px;
+	}
+
+	@include phones {
+		width: auto;
+	}
+}
+
+.footer {
+	height: rem(50px);
+	margin-top: rem(-50px);
+	position: relative;
+
+	@include mobile {
+		height: rem(100px);
+		margin-top: rem(-100px);
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}

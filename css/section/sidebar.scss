@@ -1,0 +1,91 @@
+// sidebar
+.sidebar {
+
+  @include tablets {
+    float: none;
+    width: 100%;
+    margin-bottom: rem(50px);
+  }
+
+  @include mobile {
+    float: none;
+    width: 100%;
+  }
+}
+
+.nav__menu {
+  text-align: right;
+
+  @include tablets {
+    text-align: left;
+  }
+
+  @include mobile {
+    text-align: left;
+  }
+}
+
+.nav__item {
+  @include tablets {
+    display: inline-block;
+  }
+
+  @include mobile {
+    display: inline-block;
+  }
+}
+
+.nav__link {
+  display: block;
+  text-decoration: none;
+  color: $black;
+  padding: rem(10px) rem(20px) rem(10px) rem(15px);
+  border-right: 5px solid transparent;
+
+  &:hover {
+    color: $blue;
+  }
+
+  &:active {
+    @include fira(bold);
+    color: $blue;
+    border-right: 5px solid $blue;
+  }
+
+  @include tablets {
+    padding-left: 0;
+    padding-right: rem(30px);
+    border-right: 0 none;
+
+    &:active {
+      border-right: 0 none;
+    }
+  }
+
+  @include mobile {
+    padding-left: 0;
+    border-right: 0 none;
+
+    &:active {
+      border-right: 0 none;
+    }
+  }
+}
+
+.nav__link_user-secret {
+  @include icon("\f21b");
+}
+
+.nav__link_rocket {
+  @include icon("\f135");
+}
+
+.nav__link_portfolio {
+  @include icon("\e900");
+}
+
+.nav__link_active {
+		@include fira(bold);
+		color: $blue;
+		border-right: rem(5px) solid $blue;
+}

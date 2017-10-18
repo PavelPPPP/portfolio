@@ -1,0 +1,91 @@
+// about
+
+.about {
+  float: right;
+
+  @extend %clearfix;
+
+  @include tablets {
+    float: none;
+    width: 100%;
+  }
+
+  @include mobile {
+    float: none;
+    width: 100%;
+  }
+}
+
+.about__left {
+  float: left;
+  width: rem(300px);
+  text-align: center;
+
+  @include tablets {
+    width: 29%;
+  }
+}
+
+.about__right {
+  float: right;
+  width: rem(380px);
+
+  @include tablets {
+    width: 67%;
+  }
+}
+
+.about__pic {
+  @include inline-block(middle);
+  width: rem(220px);
+  height: rem(220px);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: $red;
+  overflow: hidden;
+
+  @include tablets {
+    width: rem(166px);
+    height: rem(166px);
+  }
+
+  @include mobile {
+    width: rem(166px);
+    height: rem(166px);
+  }
+}
+
+.about__image {
+  display: block;
+  max-width: 100%;
+}
+
+.about__text {
+  margin-bottom: rem(50px);
+
+  height: rem(300px);
+  overflow: auto;
+}
+
+.dawnload__resume {
+  text-align: right;
+}
+
+.btn_red {
+  display: inline-block;
+  padding: rem(8px) rem(15px);
+  background: none;
+  color: $red;
+  @include open();
+  font-size: rem(14px);
+  border: 2px solid $red;
+  border-radius: rem(22px);
+
+  @include icon("\f019");
+
+  &:hover {
+    background: $red;
+    color: #fff;
+    cursor: pointer;
+  }
+}

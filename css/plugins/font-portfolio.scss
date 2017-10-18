@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'Portfolio';
+  src:  url('/fonts/Portfolio.eot?8ll9c8');
+  src:  url('/fonts/Portfolio.eot?8ll9c8#iefix') format('embedded-opentype'),
+  url('/fonts/Portfolio.ttf?8ll9c8') format('truetype'),
+  url('/fonts/Portfolio.woff?8ll9c8') format('woff'),
+  url('/fonts/Portfolio.svg?8ll9c8#Portfolio') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Portfolio' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-download:before {
+  content: "\f019";
+}
+.icon-phone:before {
+  content: "\f095";
+}
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-facebook-f:before {
+  content: "\f09a";
+}
+.icon-envelope:before {
+  content: "\f0e0";
+}
+.icon-desktop:before {
+  content: "\f108";
+}
+.icon-mobile:before {
+  content: "\f10b";
+}
+.icon-mobile-phone:before {
+  content: "\f10b";
+}
+.icon-rocket:before {
+  content: "\f135";
+}
+.icon-skype:before {
+  content: "\f17e";
+}
+.icon-vk:before {
+  content: "\f189";
+}
+.icon-user-secret:before {
+  content: "\f21b";
+}
+.icon-portfolio:before {
+  content: "\e900";
+}

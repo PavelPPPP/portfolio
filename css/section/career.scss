@@ -1,0 +1,140 @@
+// career
+
+.career {
+  float: right;
+
+  @extend %clearfix;
+
+}
+
+.career__left {
+  float: left;
+  width: rem(220px);
+  text-align: center;
+}
+
+.career__right {
+  float: right;
+  width: rem(380px);
+}
+
+.career__pic {
+  @include inline-block(middle);
+  width: rem(220px);
+  height: rem(220px);
+  border: 2px solid #fff;
+  border-radius: rem(10px);
+  background: $red;
+  overflow: hidden;
+}
+
+.career__image {
+  display: block;
+}
+
+.career__item {
+  text-align: right;
+
+  &:first-child {
+    .career__link {
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &:last-child {
+    .career__link {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.career__link {
+  position: relative;
+  display: inline-block;
+  width: rem(370px);
+  text-align: left;
+  text-decoration: none;
+  color: $grey;
+  font-size: rem(16px);
+  @include fira(light);
+
+  margin-bottom: rem(20px);
+  border-radius: rem(10px);
+  padding: rem(20px);
+  @include box-shadow(0 1px 3px rgba(#000, .2));
+
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: rem(-20px);
+    width: rem(1px);
+    background: $grey;
+  }
+
+  &:before {
+    top: rem(-20px);
+    bottom: 50%;
+    margin-bottom: rem(10px);
+  }
+
+  &:after {
+    top: 50%;
+    bottom: 0;
+    margin-top: rem(10px);
+  }
+
+
+  &:hover {
+    background: $blue;
+    color: $white;
+
+    .career__job {
+      color: $white;
+    }
+
+    .career__year {
+      color: $blue;
+      @include fira(bold);
+
+      &:after {
+        border: 5px solid #94e0f2;
+        margin-top: rem(-10px);
+        right: rem(-30px);
+      }
+    }
+  }
+}
+
+.career__job {
+  color: $black;
+  font-size: rem(19px);
+  @include fira();
+}
+
+.career__year {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  line-height: rem(20px);
+  margin-top: rem(-10px);
+  margin-right: rem(39px);
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: $blue;
+    border-radius: 50%;
+    width: rem(10px);
+    height: rem(10px);
+    right: rem(-25px);
+    top: 50%;
+    margin-top: rem(-5px);
+  }
+}

@@ -1,0 +1,67 @@
+@mixin box-shadow($value...) {
+	-webkit-box-shadow: $value;
+	-moz-box-shadow: $value;
+	box-shadow: $value;
+}
+
+@mixin inline-block($valign: top) {
+	display: inline-block;
+	vertical-align: $valign;
+}
+
+%clearfix {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+%block-valign {
+	&:before {
+		content: "";
+		@include inline-block(middle);
+		height: 100%;
+	}
+}
+
+@mixin icon($code) {
+	&:before {
+		font-family: 'Portfolio';
+		content: $code;
+		padding-right: rem(8px);
+	}
+}
+
+
+/*===--adaptive--===*/
+
+@function rem($px) {
+	@return $px/18px + 0rem;
+}
+
+@mixin desctop {
+	@media screen and (max-width: 1300px) {
+		@content;
+	}
+}
+
+@mixin tablets {
+	@media screen and (max-width: 992px) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin phones {
+	@media screen and (max-width: 320px) {
+		@content;
+	}
+}
+
+

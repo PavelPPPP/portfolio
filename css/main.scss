@@ -1,0 +1,26 @@
+// vars
+$grey: #727272;
+$black: #414141;
+$white: #f6f6f6;
+$blue: #33c1e3;
+$red: #e85f61;
+
+
+
+// layout
+@import "fonts/fonts";
+@import "plugins/font-portfolio";
+@import "_misc/mixins";
+@import "_misc/normalize";
+@import "_misc/adjustment";
+
+// sections
+
+@import "section/hellow";
+@import "section/header";
+@import "section/content";
+@import "section/sidebar";
+@import "section/about";
+@import "section/career";
+@import "section/portfolio";
+@import "section/footer";

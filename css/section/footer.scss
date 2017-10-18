@@ -1,0 +1,103 @@
+.footer {
+	background: $black;
+
+	.container {
+		@extend %clearfix;
+		height: 100%;
+	}
+}
+
+.footer__left, .footer__right {
+	//float: left;
+	height: 100%;
+
+	@include mobile {
+		height: 50%;
+	}
+}
+
+.footer__left {
+	float: left;
+	color: $grey;
+	width: 60%;
+
+	@extend %block-valign;
+
+	@include mobile {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.copyright {
+	font-size: rem(14px);
+	@include inline-block(middle);
+
+	@include mobile {
+
+		width: 70%;
+		text-align: center;
+		padding: rem(10px) 0;
+	}
+}
+
+
+.footer__right {
+	float: right;
+	text-align: right;
+	width: 40%;
+
+	@include mobile {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.social__list {
+	height: 100%;
+	@extend %block-valign;
+	cursor: default;
+}
+
+.social__item {
+	@include inline-block(middle);
+	background: #fff;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-left: rem(4px);
+}
+
+.social__link {
+	display: block;
+	width: rem(30px);
+	height: rem(30px);
+	background: $grey;
+	text-decoration: none;
+	font-size: rem(18px);
+	text-align: center;
+	color: $black;
+
+	i {
+		@include inline-block(middle);
+	}
+}
+
+.social__link_facebook {
+	&:hover {
+		background: #4463a6;
+	}
+}
+
+.social__link_vk {
+	&:hover {
+		background: #5d99c3;
+	}
+}
+
+.social__link_twitter {
+	&:hover {
+		background: #6ac4d9;
+	}
+}
